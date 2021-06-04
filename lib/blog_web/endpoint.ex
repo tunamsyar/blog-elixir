@@ -16,6 +16,16 @@ defmodule BlogWeb.Endpoint do
 
   socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
 
+  # get "/version" do
+  #   resp =
+  #     case :application.get_key(:webhook_processor, :vsn) do
+  #       {:ok, vsn} -> vsn
+  #       _ -> "version not found :("
+  #     end
+
+  #   send_resp(conn, 200, resp)
+  # end
+
   # Serve at "/" the static files from "priv/static" directory.
   #
   # You should set gzip to true if you are running phx.digest
